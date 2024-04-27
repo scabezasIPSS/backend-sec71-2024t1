@@ -18,7 +18,7 @@ if ($_version == 'v1') {
     if ($_mantenedor == 'mantenedor') {
         switch ($_metodo) {
             case 'GET':
-                if ($_header == $_token_get){
+                if ($_header == $_token_get) {
                     /*
                     include_once 'controller.php';
                     include_once '../conexion.php';
@@ -28,23 +28,23 @@ if ($_version == 'v1') {
                     $lista = [
                         [
                             "id" => 0,
-                            "nombre" => "ejemplo 0",
+                            "nombre" => "ejemplo 1",
                             "activo" => false
                         ],
                         [
                             "id" => 1,
-                            "nombre" => "ejemplo 1",
+                            "nombre" => "ejemplo 2",
                             "activo" => true
                         ],
                         [
                             "id" => 2,
-                            "nombre" => "ejemplo 2",
+                            "nombre" => "ejemplo 3",
                             "activo" => false
                         ],
                     ];
                     http_response_code(200);
                     echo json_encode(["data" => $lista]);
-                }else{
+                } else {
                     http_response_code(401);
                     echo json_encode(["Error" => "No tiene autorizacion GET"]);
                 }

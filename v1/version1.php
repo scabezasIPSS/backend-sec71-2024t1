@@ -8,10 +8,10 @@ $_mantenedor = $_partes[3];
 $_parametros = [];
 $_parametros = $_partes[4];
 
-if (strlen($_parametros)> 0){
+if (strlen($_parametros) > 0) {
     $_parametros = explode('?', $_parametros)[1];
     $_parametros = explode('&', $_parametros);
-}else{
+} else {
     $_parametros = [];
 }
 
@@ -24,7 +24,7 @@ header("Content-Type: application/json; charset=UTF-8");
 $_header = null;
 try {
     $_header = isset(getallheaders()['Authorization']) ? getallheaders()['Authorization'] : null;
-    if ($_header === null){
+    if ($_header === null) {
         throw new Exception("No tiene autorizacion");
     }
 } catch (Exception $e) {
@@ -34,6 +34,7 @@ try {
 
 //Tokens
 $_token_get = 'Bearer get';
+$_token_get_evaluacion = 'Bearer ciisa';
 $_token_post = 'Bearer post';
 $_token_put = 'Bearer put';
 $_token_patch = 'Bearer patch';

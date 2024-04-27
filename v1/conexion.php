@@ -25,16 +25,18 @@ class Conexion
         }
     }
 
-    public function getConnection(){
+    public function getConnection()
+    {
         $this->connection = mysqli_connect($this->host, $this->username, $this->password, $this->db, $this->port);
         mysqli_set_charset($this->connection, "utf8");
-        if (!$this->connection){
+        if (!$this->connection) {
             return mysqli_connect_errno();
         }
         return $this->connection;
     }
 
-    public function closeConnection(){
+    public function closeConnection()
+    {
         mysqli_close($this->connection);
     }
 }
