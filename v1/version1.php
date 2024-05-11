@@ -39,3 +39,7 @@ $_token_post = 'Bearer post';
 $_token_put = 'Bearer put';
 $_token_patch = 'Bearer patch';
 $_token_delete = 'Bearer delete';
+//$_token_delete_mobile = 'Bearer delete';
+$_token_delete_web = 'Bearer delete';
+$_token_delete_empresa1 = 'Bearer delete';
+$_token_delete_empresa2 = 'Bearer delete';
